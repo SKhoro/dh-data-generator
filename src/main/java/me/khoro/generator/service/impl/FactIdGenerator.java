@@ -22,7 +22,7 @@ public class FactIdGenerator implements ValueGenerator<Long> {
     @Value("${app.max_factid_value}")
     private int maxFactIdValue;
 
-    private Random random = new Random();
+    private final Random random = new Random();
 
     @Override
     public Long generate() {

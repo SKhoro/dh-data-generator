@@ -19,7 +19,7 @@ import java.util.Random;
 @Service
 public class FactStrGenerator implements ValueGenerator<String> {
 
-    private Random random = new Random();
+    private final Random random = new Random();
 
     @Value("${app.factstr_size}")
     private int strLength;

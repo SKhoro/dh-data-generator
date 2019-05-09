@@ -15,7 +15,7 @@ public enum Users {
     USER_1("user_1"), USER_2("user_2"), USER_3("user_3");
 
     @Getter
-    private String value;
+    private final String value;
 
     Users(String value) {
         this.value = value;

@@ -19,9 +19,9 @@ import java.util.Random;
 @Service
 public class UserIdGenerator implements ValueGenerator<String> {
 
-    private Users[] users = Users.values();
+    private final Users[] users = Users.values();
 
-    private Random random = new Random();
+    private final Random random = new Random();
 
     @Override
     public String generate() {

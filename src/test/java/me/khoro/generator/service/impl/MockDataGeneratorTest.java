@@ -5,9 +5,7 @@ import me.khoro.generator.service.ValueGenerator;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -29,11 +27,11 @@ public class MockDataGeneratorTest {
     @Mock
     private ValueGenerator<Long> factIdGenerator;
 
-    private Long mockFactIdData = 1L;
+    private final Long mockFactIdData = 1L;
 
-    private String mockUserIdData = "user_1";
+    private final String mockUserIdData = "user_1";
 
-    private String mockFactStrData = "qwertyuioasdfghjzxc";
+    private final String mockFactStrData = "qwertyuioasdfghjzxc";
 
     @Before
     public void init() {
