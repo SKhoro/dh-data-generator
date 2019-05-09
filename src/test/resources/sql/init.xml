@@ -23,4 +23,12 @@
 
     <!-- remove auto-inc change set because it's not supported by h2 database -->
 
+    <changeSet id="add timestamp column" author="s-kh">
+        <addColumn tableName="gen_data">
+            <column name="create_date" type="timestamp" defaultValue="now()">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
 </databaseChangeLog>

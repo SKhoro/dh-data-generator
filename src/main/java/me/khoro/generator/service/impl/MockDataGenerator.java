@@ -4,6 +4,8 @@ import me.khoro.generator.model.entity.DbData;
 import me.khoro.generator.service.ValueGenerator;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+
 /**
  * @author s-kh
  * Сервис, реализующий интерфейс генератора данных {@link me.khoro.generator.service.ValueGenerator}
@@ -40,6 +42,7 @@ public class MockDataGenerator implements ValueGenerator<DbData> {
                 null,
                 userIdGenerator.generate(),
                 factIdGenerator.generate(),
-                factStrGenerator.generate());
+                factStrGenerator.generate(),
+                new Timestamp(System.currentTimeMillis()));
     }
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 /**
  * @author s-kh
@@ -33,4 +34,7 @@ public class DbData {
 
     @Column(name = "fact_str", nullable = false)
     private String factStr;
+
+    @Column(name = "create_date", nullable = false)
+    private Timestamp createDate;
 }

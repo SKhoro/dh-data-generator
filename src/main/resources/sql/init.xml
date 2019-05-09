@@ -24,5 +24,13 @@
     <changeSet id="add auto increment" author="s-kh">
         <addAutoIncrement tableName="gen_data" columnName="id" startWith="100"/>
     </changeSet>
+    
+    <changeSet id="add timestamp column" author="s-kh">
+        <addColumn tableName="gen_data">
+            <column name="create_date" type="timestamp" defaultValue="now()">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
 
 </databaseChangeLog>
